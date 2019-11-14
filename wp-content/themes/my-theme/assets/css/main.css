@@ -22,14 +22,14 @@ body {
 
 /* Header + Footer */
 header{
-  background-color:green;
+  background-color:#00770f;
   width:100%;
   height:100px;
   display:flex;
   justify-content: space-between;
   align-items:center;
   padding:25px;
-  font-size:1.2em;
+  font-size:1.2rem;
   font-weight: bold;
 }
 footer{
@@ -41,14 +41,14 @@ footer{
   font-weight: bold;
 }
 
-.menu{
+.menu ul{
   list-style: none;
 }
-.menu-item{
+.menu > ul > li{
   display:inline-block;
-  padding-left:5px
+  padding-left:5px;
 }
-.menu-item > a{
+.menu > ul > li > a{
   text-decoration:none;
   color:white;
 }
@@ -70,24 +70,25 @@ footer{
   align-items: center;
   justify-content: center;
   flex-direction:column;
-  line-height: 2.5;
+  line-height: 1.8;
 }
 .contenubanniere p:nth-child(1){
   color:#615858;
-  font-size:1.2em;
+  font-size:1.2rem;
   font-weight:bold;
 }
 .contenubanniere p:nth-child(2){
   color:#615858;
-  font-size:1.8em;
+  font-size:1.8rem;
   font-weight:bold;
   text-transform: uppercase;
 }
 .contenubanniere p:nth-child(3){
   color:#9acf64;
-  font-size:1.6em;
+  font-size:1.6rem;
   font-weight:bold;
   text-transform: uppercase;
+  padding-bottom:20px;
 }
 .contenubanniere button{
   background-color:#0d7619;
@@ -96,18 +97,270 @@ footer{
   padding:7px;
   text-transform: uppercase;
   font-weight:bold;
+  color:white;
 }
 
-/* Sontenu - Section conference*/
+/* Contenu - Section conference*/
 .conference{
   height:50vh;
   color:#615858;
   display:flex;
   align-items: center;
   justify-content: center;
-  padding:200px;
+  padding:80px;
   flex-direction: column;
-  line-height: 2.5;
+  line-height: 1.4;
   text-align: center;
-  font-size:1.3em;
+  font-size:1.3rem;
+}
+.conference > h1{
+  position:relative;
+  font-size:2rem;
+  padding-bottom:1.5rem;
+  text-transform: uppercase;
+}
+.conference > h1:after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  border-bottom: 1px solid #a7a7a7;
+}
+.conference > p{
+  padding-top:1.5rem;
+  line-height:1.8;
+}
+
+/* Contenu - Section bandeau */
+.bandeau{
+  height:auto;
+  text-align:center;
+  background-color:#fffdf1;
+}
+.bandeau > img{
+  max-width:100%;
+}
+.bandeau > .auprogramme{
+  color:#615858;
+  display:flex;
+  justify-content: center;
+  padding:80px;
+  flex-direction: column;
+  line-height: 1.4;
+  text-align: center;
+  font-size:1.3rem;
+  position:relative;
+  text-align:center;
+}
+.bandeau > .auprogramme > h1{
+  position:relative;
+  font-size:2rem;
+  padding-bottom:1.5rem;
+  text-transform: uppercase;
+  width:fit-content;
+  margin:auto;
+}
+.bandeau > .auprogramme > h1:after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  border-bottom: 1px solid #a7a7a7;
+}
+.bandeau > .auprogramme > .grille{
+  width:100%;
+  padding-top:20px;
+  display:flex;
+}
+.bandeau > .auprogramme > .grille > div{
+  width:50%;
+}
+.bandeau > .auprogramme > .grille > div > table{
+  list-style: none;
+  line-height:3.5;
+  text-align:left;
+  padding-left:40px;
+  width:100%;
+}
+.titres{
+  display:flex;
+  padding-top:30px;
+}
+.titres h3{
+  text-transform:uppercase;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  color:#748c59;
+  font-size:1.6rem;
+}
+.vegetaux > table tr:nth-child(1) > td{
+  line-height:normal;
+}
+.bandeau > .auprogramme button{
+  background-color:#0d7619;
+  border:0;
+  border-radius:20px;
+  padding:7px;
+  text-transform: uppercase;
+  font-weight:bold;
+  color:white;
+}
+.bandeau > .auprogramme img{
+  position:absolute;
+  bottom:0;
+  right:80px;
+}
+
+/* Contenu - Section orateurs */
+.orateurs{
+  height:fit-content;
+  color:#615858;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.4;
+  text-align: center;
+  font-size:1.3rem;
+  padding:80px;
+  padding-bottom: 0;
+}
+.orateurs > h1{
+  position:relative;
+  font-size:2rem;
+  padding-bottom:1.5rem;
+  text-transform: uppercase;
+}
+.orateurs > h1:after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  border-bottom: 1px solid #a7a7a7;
+}
+.orateurs > p{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.orateurs > .listeorateurs{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  width:80%;
+}
+.orateurs > .listeorateurs > .infosorateur{
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+  flex-direction: column;
+  height:fit-content;
+  width:25%;
+  padding-bottom:40px;
+}
+.orateurs > .listeorateurs > .infosorateur > img{
+  width:40%;
+  border-radius:150px;
+}
+.orateurs > .listeorateurs > .infosorateur h4{
+  color:#365b17;
+  padding-top:10px;
+  font-size:1.4rem;
+}
+.infosorateur p{
+  color:#b1b1b1;
+  padding-bottom:10px;
+}
+.infosorateur button{
+  background-color:#9acf64;
+  border:0;
+  padding:8px;
+  padding-left:12px;
+  padding-right:12px;
+  border-radius:25px;
+  text-transform: uppercase;
+  color:white;
+  display:flex;
+  align-items: center;
+}
+.infosorateur > .btnvideo > img{
+  width:20px;
+  padding-right:5px;
+}
+.btnvideo{
+  padding:0;
+}
+
+/* Contenu - Section infos pratiques */
+.infospratiques{
+  height:fit-content;
+  color:#615858;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.4;
+  text-align: center;
+  font-size:1.3rem;
+  padding:80px;
+}
+.infospratiques > .titresection > h1{
+  position:relative;
+  font-size:2rem;
+  padding-bottom:1.5rem;
+  text-transform: uppercase;
+}
+.infospratiques > .titresection > h1:after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  border-bottom: 1px solid #a7a7a7;
+}
+.infospratiques > .titresection{
+  padding-bottom:30px;
+}
+.infospratiques > .contenuinfos{
+  position: relative;
+}
+.infospratiques > .contenuinfos > img{
+  width: 100%;
+}
+.infospratiques > .contenuinfos > .infos{
+  width: 30%;
+  height:99%;
+  position:absolute;
+  bottom:5px;
+  left:9%;
+  background: #9acf64;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.infos > .donnees{
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.infos > .donnees > div{
+  display:flex;
+}
+.localistion,.horaires,.sante{
+  padding:30px;
+}
+.localistion, .horaires{
+  border-bottom:1px solid white;
 }
