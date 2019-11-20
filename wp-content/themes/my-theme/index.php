@@ -113,14 +113,20 @@
             <p>Square Brussels<br> Mont des Arts<br> 1000 Bruxelles<br> Belgique</p>
           </div>
           <div class="horaires">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-map.svg" alt="Lieu"">
-            <p>Square Brussels<br> Mont des Arts<br> 1000 Bruxelles<br> Belgique</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-time.svg" alt="Lieu"">
+            <p>Le 03.12.2019<br> de 8h30 à 12h30</p>
           </div>
           <div class="sante">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-map.svg" alt="Lieu"">
-            <p>Square Brussels<br> Mont des Arts<br> 1000 Bruxelles<br> Belgique</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-dinner.svg" alt="Lieu"">
+            <p>Healthy<br> Walking dinner</p>
           </div>
         </div>  
+      </div>
+      <div class="voircarte">
+        <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 56 75">
+            <path fill="none" fill-rule="evenodd" stroke="#0d7619" stroke-width="3.5" d="M28 2c14.36 0 26 11.54 26 25.775 0 9.49-8.667 24.33-26 44.521-17.333-20.19-26-35.03-26-44.52C2 13.54 13.64 2 28 2zm0 11.556c-7.446 0-13.481 6.035-13.481 13.481S20.554 40.519 28 40.519s13.481-6.036 13.481-13.482S35.446 13.556 28 13.556z"/>
+        </svg>
+        <p>Voir sur la carte</p>
       </div>
     </div>
 

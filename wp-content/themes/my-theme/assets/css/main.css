@@ -357,10 +357,46 @@ footer{
 }
 .infos > .donnees > div{
   display:flex;
+  font-size:1.8rem;
+  color:white;
+  text-align:left;
+  justify-content: center;
+  align-items: center;
+}
+.infos > .donnees > div:nth-child(1){
+  text-decoration: underline;
+}
+.infos > .donnees > div > img{
+  width:56px;
+  height:75px;
+  padding-right:15px;
+}
+.infos > .donnees > div:nth-child(3) > img{
+  width:56px;
+  height:60px;
+  padding-right:15px;
 }
 .localistion,.horaires,.sante{
   padding:30px;
 }
 .localistion, .horaires{
   border-bottom:1px solid white;
+}
+.voircarte{
+  position:absolute;
+  z-index:100;
+  background-color:white;
+  display:flex;
+  align-items: center;
+  right:7%;
+  bottom:7%;
+  color:#0d7619;
+  padding:10px;
+  border-radius:52px;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+.voircarte > svg{
+  height:25px;
+  padding-right:10px;
 }
