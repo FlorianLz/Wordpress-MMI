@@ -129,9 +129,82 @@
         <p>Voir sur la carte</p>
       </div>
     </div>
+  </section>
 
-
-
+  <section class="videos">
+    <div class="titresection"><h1>Vidéos</h1></div>
+      <div class="contenuvideos">
+        <div class="haut">
+          <div class="video">
+            <div class="masque"></div>
+            <div class="contenumasque">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+              <h3>Le potager du roi</h3>
+              <p>Antoine Jacobsohn</p>
+            </div>
+          </div>
+          <div class="video">
+            <div class="masque"></div>
+            <div class="contenumasque">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+              <h3>Eco-citoyenneté</h3>
+              <p class="notransform">Flora Joubier</p>
+            </div>
+          </div>
+        </div>
+        <div class="petitevideo">
+          <div class="imagevideo">
+            <div class="image">
+              <div class="masqueimage">
+              </div>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+            </div>
+            <div><h3>Construction de la valeur des légumineuses</h3>
+              <p>Marie-Benoît Magrini</p>
+            </div>
+          </div>
+          <div class="descvideo"></div>
+        </div>
+        <div class="petitevideo">
+          <div class="imagevideo">
+            <div class="image">
+              <div class="masqueimage">
+              </div>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+            </div>
+            <div><h3>L'agriculture urbaine, vitrine de la modernité</h3>
+              <p>Florent Quellier</p>
+            </div>
+          </div>
+          <div class="descvideo"></div>
+        </div>
+        <div class="petitevideo">
+          <div class="imagevideo">
+            <div class="image">
+              <div class="masqueimage">
+              </div>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+            </div>
+            <div><h3>Vers une éducation agri-alimentaire</h3>
+              <p>Julie Le Gall</p>
+            </div>
+          </div>
+          <div class="descvideo"></div>
+        </div>
+        <div class="petitevideo">
+          <div class="imagevideo">
+            <div class="image">
+              <div class="masqueimage">
+              </div>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+            </div>
+            <div><h3>Réinventer le lien entre citadins et agricualteurs</h3>
+              <p>Nicolas Bricas</p>
+            </div>
+          </div>
+          <div class="descvideo"></div>
+        </div>
+      </div>
   </section>
 
 

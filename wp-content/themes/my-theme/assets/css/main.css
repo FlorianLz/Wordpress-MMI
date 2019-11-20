@@ -313,13 +313,13 @@ footer{
   font-size:1.3rem;
   padding:80px;
 }
-.infospratiques > .titresection > h1{
+.titresection > h1{
   position:relative;
   font-size:2rem;
   padding-bottom:1.5rem;
   text-transform: uppercase;
 }
-.infospratiques > .titresection > h1:after{
+.titresection > h1:after{
   content: "";
   position: absolute;
   width: 50%;
@@ -329,7 +329,7 @@ footer{
   right: 25%;
   border-bottom: 1px solid #a7a7a7;
 }
-.infospratiques > .titresection{
+.titresection{
   padding-bottom:30px;
 }
 .infospratiques > .contenuinfos{
@@ -399,4 +399,117 @@ footer{
 .voircarte > svg{
   height:25px;
   padding-right:10px;
+}
+
+
+/* Contenu - Section vidéos */
+.videos{
+  height:fit-content;
+  color:#615858;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.4;
+  text-align: center;
+  font-size:1.3rem;
+  padding:80px;
+}
+.contenuvideos{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+  height:fit-content;
+  justify-content: space-between;
+}
+.haut{
+  width:100%;
+  height: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+.contenuvideos > .haut > .video:nth-child(1){
+  width:49.6%;
+  height:300px;
+  background-image: url('../img/video.jpg');
+  background-size:cover;
+}
+.contenuvideos > .haut > .video:nth-child(2){
+  width:49.6%;
+  height:300px;
+  background-image: url('../img/video.jpg');
+  background-size:cover;
+  justify-self:flex-end;
+}
+.video{
+  position:relative;
+}
+.video .masque{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.4;
+  z-index:10;
+}
+.contenumasque{
+  z-index:20;
+  position:absolute;
+  color:white;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  font-size:1.8rem;
+  text-transform: uppercase;
+}
+.contenumasque > img{
+  width:20%;
+}
+.contenumasque .notransform{
+  text-transform: none;
+}
+.petitevideo{
+  width:49.6%;
+  padding-top:15px;
+}
+.imagevideo{
+  display:flex;
+  align-items: center;
+  text-align:left;
+  width:100%;
+}
+.imagevideo > .image{
+  width:60%;
+  height:170px;
+  background-image: url('../img/video.jpg');
+  background-size:cover;
+}
+.image{
+  position:relative;
+}
+.imagevideo > div{
+  width:40%;
+}
+.imagevideo h3{
+  padding-left:15px;
+  color:black;
+  font-size:2rem;
+}
+.imagevideo p{
+  padding-left:15px;
+  color:grey;
+  font-size:1.5rem;
+}
+.image > img{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:15%;
+}
+.masqueimage{
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity: 0.4;
 }
