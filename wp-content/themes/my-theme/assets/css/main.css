@@ -56,7 +56,7 @@ footer{
 /* Contenu - Section banniere */
 .banniere{
   position:relative;
-  background-image:url('../img/banniere.jpg');
+  background-image:url( 'var(--imgbanniere)' );
   background-size:cover;
   min-height:50vh;
 }

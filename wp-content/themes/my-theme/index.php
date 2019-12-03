@@ -1,32 +1,62 @@
 <?php get_header(); ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+if ( have_posts() ) {
+  while ( have_posts() ) {
+    $banner_background_image = get_field('banner_background_image');
+    $conference_background_image = get_field('conference_background_image');
+
+    /**
+     * La méthode the_post() permet de charger le post courant
+     * Un post est un type de contenu, par exemple une actualité ou une page
+     **/
+    the_post(); 
+
+    /**
+     * La méthode the_content() affiche le contenu du post en cours
+     * Il s'agit du contenu que vous avez renseigné dans le back-office
+     * Il existe d'autres méthodes, par exemple pour afficher le Titre du contenu, on peut utiliser la méthode the_title()
+     */
+    the_content();
+?>
+
 <div class="container">
   <section class="banniere">
-    <div class="contenubanniere">
-      <p>Les rencontres de la Fondation le 03 Décembre à Bruxelles</p>
-      <p>Chaîne alimentaire végétale et durabilité :</p>
-      <p>Une question d'équilibre !</p>
-      <button>S'inscrire aux rencontres</button>
+    <div class="contenubanniere" style="--bgimg=<?php echo $banner_background_image['url']?>">
+      <p><?php the_field('banner_baseline'); ?></p>
+      <p><?php the_field('banner_title_brown'); ?></p>
+      <p><?php the_field('banner_title_green'); ?></p>
+      <a href="<?php the_field('banner_register_link'); ?>" target="_blank"><button>S'inscrire aux rencontres</button></a>
     </div>
   </section>
 
   <section class="conference">
-    <h1>La conférence</h1>
-    <p>Les Rencontres de la Fondation s'intitulent cette année "Chaîne alimentaire
-    <br> végétale et durabilité : une question d'équilibre" ! Elles se tiendront le 3 Décembre prochain à Bruxelles
-    <br>et auront pour objectif de décrypter la transition nutritionnelle des systèmes alimentaires
-    à travers le monde,
-    <br>qui appelle à favoriser une alimentation plus végétale.</p>
+    <h1><?php the_field('conference_title'); ?></h1>
+    <p><?php the_field('conference_content'); ?></p>
   </section>
 
   <section class="bandeau">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bandeau.jpg">
+    <img src="<?php echo $conference_background_image['url']; ?>">
     <div class="auprogramme">
       <h1>Au programme</h1>
 
       <div class="titres">
-        <h3>Les végétaux dans la chaîne alimentaire</h3>
-        <h3>Les activités de la fondation</h3>
+        <h3><?php the_field('programme_title1'); ?></h3>
+        <h3><?php the_field('programme_title2'); ?></h3>
       </div>
 
       <div class="grille">
@@ -208,34 +238,7 @@
   </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
-if ( have_posts() ) {
-  while ( have_posts() ) {
-    /**
-     * La méthode the_post() permet de charger le post courant
-     * Un post est un type de contenu, par exemple une actualité ou une page
-     **/
-    the_post(); 
-
-    /**
-     * La méthode the_content() affiche le contenu du post en cours
-     * Il s'agit du contenu que vous avez renseigné dans le back-office
-     * Il existe d'autres méthodes, par exemple pour afficher le Titre du contenu, on peut utiliser la méthode the_title()
-     */
-    the_content();
-
 
   }
 }
