@@ -1,19 +1,5 @@
 <?php get_header(); ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 if ( have_posts() ) {
   while ( have_posts() ) {
@@ -31,12 +17,12 @@ if ( have_posts() ) {
      * Il s'agit du contenu que vous avez renseigné dans le back-office
      * Il existe d'autres méthodes, par exemple pour afficher le Titre du contenu, on peut utiliser la méthode the_title()
      */
-    the_content();
+   
 ?>
 
 <div class="container">
   <section class="banniere">
-    <div class="contenubanniere" style="--bgimg=<?php echo $banner_background_image['url']?>">
+    <div class="contenubanniere" style="background-image:url('<?php echo $banner_background_image['url'] ?>;')">
       <p><?php the_field('banner_baseline'); ?></p>
       <p><?php the_field('banner_title_brown'); ?></p>
       <p><?php the_field('banner_title_green'); ?></p>
@@ -235,6 +221,15 @@ if ( have_posts() ) {
           <div class="descvideo"></div>
         </div>
       </div>
+  </section>
+
+  <section class="actus">
+    <div class="titresection"><h1>Actus</h1></div>
+    <div class="article">
+    <h2><?php the_title(); ?></h2>
+    <p><?php the_content(); ?></p>
+
+    </div>
   </section>
 
 

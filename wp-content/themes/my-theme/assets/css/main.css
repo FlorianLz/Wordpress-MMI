@@ -56,7 +56,7 @@ footer{
 /* Contenu - Section banniere */
 .banniere{
   position:relative;
-  background-image:url( 'var(--imgbanniere)' );
+  background-image:url('var(--imgbanniere)');
   background-size:cover;
   min-height:50vh;
 }
@@ -512,4 +512,24 @@ footer{
   height:100%;
   background-color:black;
   opacity: 0.4;
+}
+
+/* Contenu - Section actus */
+.actus{
+  background-color:#fffdf1;
+  height: fit-content;
+  color: #615858;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.4;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 80px;
+}
+.article{
+  width:20%;
+  height:300px;
+  border:1px solid black;
 }
