@@ -29,4 +29,6 @@ register_nav_menus( array(
   'nav_footer' => __('Menu footer'),
 ) );
 
+// Ajouter la prise en charge des images mises en avant
+add_theme_support( 'post-thumbnails' );
 ?>
