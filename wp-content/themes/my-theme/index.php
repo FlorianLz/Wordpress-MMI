@@ -48,21 +48,28 @@ if ( have_posts() ) {
       <div class="grille">
         <div class="vegetaux">
           <table>
-            <tr><th>8:30</th><td>Introduction par Christophe<br> Fondation</td></tr>
-            <tr><th>9:00</th><td>Wim de Vries Wageningen University</td></tr>
-            <tr><th>9:45</th><td>Benjamin Alles Paris XIII University</td></tr>
-            <tr><th>10:15</th><td>Armando Perez Cueto Copenhagen University</td></tr>
-            <tr><th>10:45</th><td>Cofee break</li>
+          <?php 
+          $programs = get_field('programme_content1');
+          foreach($programs as $program){
+            $heure = $program['programme_heures1'];
+            $liste = $program['programme_liste1'];
+            echo "<tr><th>$heure</th><td>$liste</td></tr>";
+          }
+          ?>
           </table>
 
         </div>
         
         <div class="activites">
           <table>
-            <tr><th>11:15</th><td>Jacynthe Lafrenière, Lauréate du Prix de Recherche</td></tr>
-            <tr><th>11:35</th><td>Le projet EPICALIM de la Fondation</td></tr>
-            <tr><th>12:00</th><td>Cérémonie du Prix de Recherche</td></tr>
-            <tr><th>12:30</th><td>Lunch</td></tr>
+          <?php 
+          $programs = get_field('programme_content2');
+          foreach($programs as $program){
+            $heure = $program['programme_heures2'];
+            $liste = $program['programme_liste2'];
+            echo "<tr><th>$heure</th><td>$liste</td></tr>";
+          }
+          ?>
           </table>
         </div>
       </div>
@@ -77,44 +84,25 @@ if ( have_posts() ) {
 
   <section class="orateurs">
     <h1>Les orateurs</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dicta.</p>
+    <p><?php the_field('orateurs_description_section'); ?></p>
     <div class="listeorateurs">
-      <div class="infosorateur">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portrait.jpg" alt="Photo orateur">
-        <h4>Wim de Vries</h4>
-        <p>Lorem ipsum calidae (1)</p>
-        <button class="btnvideo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" alt="Image lecture vidéo">Lire la vidéo</button>
-      </div>
-      <div class="infosorateur">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portrait.jpg" alt="Photo orateur">
-        <h4>Laurence Depezay</h4>
-        <p>Lorem ipsum calidae (6)</p>
-        <button>En savoir plus</button>
-      </div>
-      <div class="infosorateur">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portrait.jpg" alt="Photo orateur">
-        <h4>Armando Perez Cueto</h4>
-        <p>Lorem ipsum calidae (3)</p>
-        <button class="btnvideo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" alt="Image lecture vidéo">Lire la vidéo</button>
-      </div>
-      <div class="infosorateur">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portrait.jpg" alt="Photo orateur">
-        <h4>Christophe</h4>
-        <p>Lorem ipsum calidae (4)</p>
-        <button>Lire la tribune</button>
-      </div>
-      <div class="infosorateur">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portrait.jpg" alt="Photo orateur">
-        <h4>Benjamin Alles</h4>
-        <p>Lorem ipsum calidae (2)</p>
-        <button>Lire la tribune</button>
-      </div>
-      <div class="infosorateur">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portrait.jpg" alt="Photo orateur">
-        <h4>Jacinthe Lafronière</h4>
-        <p>Lorem ipsum calidae (5)</p>
-        <button class="btnvideo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" alt="Image lecture vidéo">Lire la vidéo</button>
-      </div>
+      <?php 
+      $orateurs = get_field('orateurs_content');
+      foreach($orateurs as $orateur){
+        $photo = $orateur['orateurs_photo']['url'];
+        $nomprenom = $orateur['orateurs_nomprenom'];
+        $description = $orateur['orateurs_description']; ?>
+
+        <div class="infosorateur">
+          <img src="<?php echo $photo; ?>" alt="Photo orateur">
+          <h4><?php echo $nomprenom; ?></h4>
+          <p><?php echo $description; ?></p>
+          <button class="btnvideo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" alt="Image lecture vidéo">Lire la vidéo</button>
+        </div>
+
+      <?php 
+      }
+      ?>
     </div>
   </section>
 
