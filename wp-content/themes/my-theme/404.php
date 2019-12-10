@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<h1>Page introuvable !</h1>
+<h1>Erreur 404 : Page introuvable !</h1>
 
 <?php
 if ( have_posts() ) {

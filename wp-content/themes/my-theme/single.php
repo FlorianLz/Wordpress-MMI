@@ -16,8 +16,12 @@ if ( have_posts() ) {
      */
     
 ?>  
-<h1><?php the_title(); ?></h1>
-<p><?php the_content(); ?></p>
+<div class="article">
+  <h1><?php the_title(); ?></h1>
+  <?php the_post_thumbnail(); ?>
+  <p><?php the_content(); ?></p>
+</div>
+
    
 
 
