@@ -5,6 +5,8 @@ if ( have_posts() ) {
   while ( have_posts() ) {
     $banner_background_image = get_field('banner_background_image');
     $conference_background_image = get_field('conference_background_image');
+    $image_telechargement1 = get_field('image_telechargement1');
+    $image_telechargement2 = get_field('image_telechargement2');
 
     /**
      * La méthode the_post() permet de charger le post courant
@@ -26,7 +28,8 @@ if ( have_posts() ) {
       <p><?php the_field('banner_baseline'); ?></p>
       <p><?php the_field('banner_title_brown'); ?></p>
       <p><?php the_field('banner_title_green'); ?></p>
-      <a href="<?php the_field('banner_register_link'); ?>" target="_blank"><button>S'inscrire aux rencontres</button></a>
+      <?php $link = get_field('banner_register_link'); ?>
+      <a href="<?php echo $link['url']; ?>" target="_blank"><button><?php echo $link['title']; ?></button></a>
     </div>
   </section>
 
@@ -75,7 +78,7 @@ if ( have_posts() ) {
       </div>
 
       <div class="inscription">
-        <button>S'inscrire aux rencontres</button>
+        <a href="<?php echo $link['url']; ?>" target="_blank"><button><?php echo $link['title']; ?></button></a>
       </div>
 
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/programme.png">
@@ -107,7 +110,7 @@ if ( have_posts() ) {
   </section>
 
   <section class="infospratiques">
-    <div class="titresection"><h1>Informationsf pratiques</h1></div>
+    <div class="titresection"><h1>Informations pratiques</h1></div>
     <div class="contenuinfos">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lieu.png" alt="Lieu">
       <div class="infos">
@@ -233,7 +236,15 @@ if ( have_posts() ) {
     </div>
   </section>
 
-
+  <section class="telechargements">
+        <div class="carte">
+          <img src="<?php echo $image_telechargement1['url']; ?>">
+        </div>
+        <div class="carte">
+          <img src="<?php echo $image_telechargement2['url']; ?>">
+        </div>
+  </section>
+  
 <?php
 
   }

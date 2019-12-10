@@ -586,6 +586,20 @@ footer{
   font-size:1.3rem;
 }
 
+/* Contenu - Partie Téléchargements */
+.telechargements{
+  height:fit-content;
+  padding:40px;
+  display:flex;
+  justify-content: center;
+}
+.carte{
+  width:auto;
+  height:auto;
+  border:5px solid white;
+  padding-left:25px;
+}
+
 /* Page single.php (Article détaillé)*/
 .article{
   width:100%;
