@@ -592,6 +592,7 @@ footer{
   padding:40px;
   display:flex;
   justify-content: center;
+  flex-wrap:wrap;
 }
 .carte{
   width:auto;

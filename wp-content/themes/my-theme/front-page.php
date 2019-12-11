@@ -224,10 +224,10 @@ if ( have_posts() ) {
         <div class="article">
           <div class="imagearticle"><?php the_post_thumbnail(); ?></div>
           <div class="infosarticle">
-            <div class="titrearticle"><?php echo get_the_title(); ?></div>
-            <div class="contenuarticle"><?php echo get_the_excerpt(); ?></div>
-            <div class="boutonsuite"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><div>Lire la suite</div></a></div>
-            <div class="datearticle"><?php echo get_the_date(); ?></div>
+            <div class="titrearticle"><?php the_title(); ?></div>
+            <div class="contenuarticle"><?php the_excerpt(); ?></div>
+            <div class="boutonsuite"><a href="<?php the_permalink(); ?>"><div>Lire la suite</div></a></div>
+            <div class="datearticle"><?php the_date(); ?></div>
           </div>
         
         </div>

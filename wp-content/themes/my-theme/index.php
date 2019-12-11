@@ -3,8 +3,6 @@
 <?php
 if ( have_posts() ) {
   while ( have_posts() ) {
-    $banner_background_image = get_field('banner_background_image');
-    $conference_background_image = get_field('conference_background_image');
 
     /**
      * La méthode the_post() permet de charger le post courant
