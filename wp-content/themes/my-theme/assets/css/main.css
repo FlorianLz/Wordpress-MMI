@@ -617,3 +617,18 @@ footer{
   padding-top:20px;
   font-size:1.7rem;
 }
+
+/* Page page.php (contact) */
+.contact{
+  margin:auto;
+  width:fit-content;
+  text-align: center;
+  font-size:2rem;
+}
+.contact > h1{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.contactform form{
+  width:fit-content;
+}
