@@ -7,6 +7,7 @@ if ( have_posts() ) {
     $conference_background_image = get_field('conference_background_image');
     $image_telechargement1 = get_field('image_telechargement1');
     $image_telechargement2 = get_field('image_telechargement2');
+    $infos_banner = get_field('infos_banner');
 
     /**
      * La méthode the_post() permet de charger le post courant
@@ -41,7 +42,7 @@ if ( have_posts() ) {
   <section class="bandeau">
     <img src="<?php echo $conference_background_image['url']; ?>">
     <div class="auprogramme">
-      <h1>Au programme</h1>
+      <h1><?php the_field('programme_title'); ?></h1>
 
       <div class="titres">
         <h3><?php the_field('programme_title1'); ?></h3>
@@ -86,7 +87,7 @@ if ( have_posts() ) {
   </section>
 
   <section class="orateurs">
-    <h1>Les orateurs</h1>
+    <h1><?php the_field('orateurs_title'); ?></h1>
     <p><?php the_field('orateurs_description_section'); ?></p>
     <div class="listeorateurs">
       <?php 
@@ -110,21 +111,21 @@ if ( have_posts() ) {
   </section>
 
   <section class="infospratiques">
-    <div class="titresection"><h1>Informations pratiques</h1></div>
+    <div class="titresection"><h1><?php the_field('infos_title'); ?></h1></div>
     <div class="contenuinfos">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lieu.png" alt="Lieu">
+      <img src="<?php echo $infos_banner['url']; ?>" alt="Lieu">
       <div class="infos">
       <div class="donnees">
         <div class="localistion">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-map.svg" alt="Lieu"">
-            <p>Square Brussels<br> Mont des Arts<br> 1000 Bruxelles<br> Belgique</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-map.svg" alt="Lieu">
+            <p><?php the_field('infos_lieu'); ?><br> <?php the_field('infos_ville'); ?><br> <?php the_field('infos_pays'); ?></p>
           </div>
           <div class="horaires">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-time.svg" alt="Lieu"">
-            <p>Le 03.12.2019<br> de 8h30 à 12h30</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-time.svg" alt="Lieu">
+            <p><?php the_field('infos_date'); ?><br> <?php the_field('infos_heure'); ?></p>
           </div>
           <div class="sante">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-dinner.svg" alt="Lieu"">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-dinner.svg" alt="Lieu">
             <p>Healthy<br> Walking dinner</p>
           </div>
         </div>  
