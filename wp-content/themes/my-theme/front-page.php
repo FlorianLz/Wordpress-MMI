@@ -8,6 +8,9 @@ if ( have_posts() ) {
     $image_telechargement1 = get_field('image_telechargement1');
     $image_telechargement2 = get_field('image_telechargement2');
     $infos_banner = get_field('infos_banner');
+    $infos_pictolieu = get_field('infos_pictolieu');
+    $infos_pictodate = get_field('infos_pictodate');
+    $infos_pictoadjectif = get_field('infos_pictoadjectif');
 
     /**
      * La méthode the_post() permet de charger le post courant
@@ -117,16 +120,16 @@ if ( have_posts() ) {
       <div class="infos">
       <div class="donnees">
         <div class="localistion">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-map.svg" alt="Lieu">
+            <img src="<?php echo $infos_pictolieu['url']; ?>" alt="Lieu">
             <p><?php the_field('infos_lieu'); ?><br> <?php the_field('infos_ville'); ?><br> <?php the_field('infos_pays'); ?></p>
           </div>
           <div class="horaires">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-time.svg" alt="Lieu">
+            <img src="<?php echo $infos_pictodate['url']; ?>" alt="Lieu">
             <p><?php the_field('infos_date'); ?><br> <?php the_field('infos_heure'); ?></p>
           </div>
           <div class="sante">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/picto-dinner.svg" alt="Lieu">
-            <p>Healthy<br> Walking dinner</p>
+            <img src="<?php echo $infos_pictoadjectif['url']; ?>" alt="Lieu">
+            <p><?php the_field('infos_adjectif1'); ?><br><?php the_field('infos_adjectif2'); ?></p>
           </div>
         </div>  
       </div>
@@ -140,23 +143,23 @@ if ( have_posts() ) {
   </section>
 
   <section class="videos">
-    <div class="titresection"><h1>Vidéos</h1></div>
+    <div class="titresection"><h1><?php the_field('videos_title'); ?></h1></div>
       <div class="contenuvideos">
         <div class="haut">
           <div class="video">
             <div class="masque"></div>
             <div class="contenumasque">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
-              <h3>Le potager du roi</h3>
-              <p>Antoine Jacobsohn</p>
+              <h3><?php the_field('videos_title1'); ?></h3>
+              <p><?php the_field('videos_author1'); ?></p>
             </div>
           </div>
           <div class="video">
             <div class="masque"></div>
             <div class="contenumasque">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
-              <h3>Eco-citoyenneté</h3>
-              <p class="notransform">Flora Joubier</p>
+              <h3><?php the_field('videos_title2'); ?></h3>
+              <p class="notransform"><?php the_field('videos_author2'); ?></p>
             </div>
           </div>
         </div>
@@ -167,21 +170,8 @@ if ( have_posts() ) {
               </div>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
             </div>
-            <div><h3>Construction de la valeur des légumineuses</h3>
-              <p>Marie-Benoît Magrini</p>
-            </div>
-          </div>
-          <div class="descvideo"></div>
-        </div>
-        <div class="petitevideo">
-          <div class="imagevideo">
-            <div class="image">
-              <div class="masqueimage">
-              </div>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
-            </div>
-            <div><h3>L'agriculture urbaine, vitrine de la modernité</h3>
-              <p>Florent Quellier</p>
+            <div><h3><?php the_field('videos_title3'); ?></h3>
+              <p><?php the_field('videos_author3'); ?></p>
             </div>
           </div>
           <div class="descvideo"></div>
@@ -193,8 +183,8 @@ if ( have_posts() ) {
               </div>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
             </div>
-            <div><h3>Vers une éducation agri-alimentaire</h3>
-              <p>Julie Le Gall</p>
+            <div><h3><?php the_field('videos_title4'); ?></h3>
+              <p><?php the_field('videos_author4'); ?></p>
             </div>
           </div>
           <div class="descvideo"></div>
@@ -206,8 +196,21 @@ if ( have_posts() ) {
               </div>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
             </div>
-            <div><h3>Réinventer le lien entre citadins et agricualteurs</h3>
-              <p>Nicolas Bricas</p>
+            <div><h3><?php the_field('videos_title5'); ?></h3>
+              <p><?php the_field('videos_author5'); ?></p>
+            </div>
+          </div>
+          <div class="descvideo"></div>
+        </div>
+        <div class="petitevideo">
+          <div class="imagevideo">
+            <div class="image">
+              <div class="masqueimage">
+              </div>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png">
+            </div>
+            <div><h3><?php the_field('videos_title6'); ?></h3>
+              <p><?php the_field('videos_author6'); ?></p>
             </div>
           </div>
           <div class="descvideo"></div>
@@ -216,7 +219,7 @@ if ( have_posts() ) {
   </section>
 
   <section class="actus">
-    <div class="titresection"><h1>Actus</h1></div>
+    <div class="titresection"><h1><?php the_field('actus_title'); ?></h1></div>
     <div class="contenuactus">
       <?php $query = new WP_QUERY(array('post_type' => 'post'));
       while($query->have_posts()){
